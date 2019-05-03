@@ -1,0 +1,36 @@
+.hoteis{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: #F2F2F2;
+    width: 100%;
+}
+.hotel{
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: center;
+    border-radius: 20px;
+    margin: 1em;
+    background-color: white;
+    box-shadow: 1px 5px 3px rgba(0, 0, 0, 0.16);
+    width: 40%;
+}
+.imagem-hotel{
+    width: 35%;
+    border-radius: 20px 0 0 20px;
+    background-color:teal;
+}
+.dados-hotel{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5%; 
+    margin: 0;
+    flex-grow: 1;
+}
+
+.dados-hotel p, h3{
+    margin: 0.5%;
+}
