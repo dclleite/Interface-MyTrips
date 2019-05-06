@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
+import { Cidade } from 'src/model/cidade';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  cidades : Cidade[];
+
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    return this.dataService.getCidades().subscribe(data => this.cidades = data);
   }
 
 }

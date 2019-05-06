@@ -8,8 +8,8 @@ import { Hotel } from 'src/model/hotel';
 })
 export class DataService {
 
-  cidadeApiUrl = 'http://localhost/MyTrips/MyTrips/Cidade';
-  hotelApiUrl = 'http://localhost/MyTrips/MyTrips/Hotel'
+  cidadeApiUrl = 'http://177.105.34.165/MyTrips/MyTrips/Cidade';
+  hotelApiUrl = 'http://177.105.34.165/MyTrips/MyTrips/Hotel'
 
   constructor(private _http: HttpClient) { }
 
