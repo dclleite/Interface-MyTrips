@@ -12,6 +12,12 @@ export class HeaderComponent implements OnInit {
 
   cidades : Cidade[];
 
+  public placeholderIcon = require("./icones-filtros/placeholder.svg");
+  public calendarIcon = require("./icones-filtros/calendar-page-empty.svg");
+  public manUserIcon = require("./icones-filtros/man-user.svg");
+  public crownIcon = require("./icones-filtros/crown.svg");
+  public creditCardIcon = require("./icones-filtros/credit-card.svg");
+
   date = new FormControl(new Date());
 
   constructor(private dataService: DataService) { }
@@ -19,5 +25,6 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.dataService.getCidades().subscribe(data => this.cidades = data);
   }
+
 
 }

@@ -26,8 +26,12 @@ h1{
     align-items: center;
     text-align: center;
     text-align-last: center;
-    margin: 3% 0;
+    margin: 3% 1.5%;
     width: 15%;
+}
+.icone{
+    width: 30%;
+    height: 30%;
 }
 .mat-form-field{
     width: 70% ;
