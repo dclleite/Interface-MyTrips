@@ -8,16 +8,18 @@ import { Hotel } from 'src/model/hotel';
 })
 export class DataService {
 
-  cidadeApiUrl = 'http://177.105.34.165/MyTrips/MyTrips/Cidade';
-  hotelApiUrl = 'http://177.105.34.165/MyTrips/MyTrips/Hotel'
+  Api = 'http://177.105.34.165/MyTrips/MyTrips/';
 
   constructor(private _http: HttpClient) { }
 
   getCidades(){
-    return this._http.get<Cidade[]>(this.cidadeApiUrl);
+    return this._http.get<Cidade[]>(this.Api + 'Cidade');
   }
 
   getHoteis(){
-    return this._http.get<Hotel[]>(this.hotelApiUrl);
+    return this._http.get<Hotel[]>(this.Api + 'Hotel');
+  }
+  getHoteisPorIdCidade(id){
+    return this._http.get<Hotel[]>(this.Api + 'Hotel?idCidade=' + id);
   }
 }

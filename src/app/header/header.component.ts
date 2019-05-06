@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
 import { DataService } from '../data.service';
 import { Cidade } from 'src/model/cidade';
 import { FormControl } from '@angular/forms';
+import { headersToString } from 'selenium-webdriver/http';
 
 @Component({
   selector: 'app-header',
@@ -11,6 +12,11 @@ import { FormControl } from '@angular/forms';
 export class HeaderComponent implements OnInit {
 
   cidades : Cidade[];
+  static emitirIdCidade = new EventEmitter<string>();
+
+  cidadeSelecionada(event){
+    HeaderComponent.emitirIdCidade.emit(event);
+  }
 
   public placeholderIcon = require("./icones-filtros/placeholder.svg");
   public calendarIcon = require("./icones-filtros/calendar-page-empty.svg");
@@ -27,4 +33,6 @@ export class HeaderComponent implements OnInit {
   }
 
 
+
 }
+

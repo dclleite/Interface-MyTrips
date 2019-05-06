@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Hotel } from 'src/model/hotel';
 import { DataService } from '../data.service';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-lista-hotel',
@@ -14,7 +15,11 @@ export class ListaHotelComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    return this.dataService.getHoteis().subscribe(data => this.hoteis = data);
-  }
+    HeaderComponent.emitirIdCidade.subscribe(
+      idCidade => this.dataService.getHoteisPorIdCidade(idCidade).subscribe(
+        data => this.hoteis = data
+      )
+    );
+  } 
 
 }
