@@ -1,12 +1,41 @@
 <div class="cabecalho">
   <h1>my trips</h1>
   <div class="filtros">
-    <select>
-      <option  *ngFor="let c of cidades">{{c.Nome}}</option >
-    </select>
-    <input type="date">
-    <input type="number">
-    <input type="number">
-    <input type="number">
+    <div class="filtro">
+        <mat-form-field>  
+          <mat-select placeholder="Cidade">
+              <mat-option *ngFor="let c of cidades" [value]="c.Id" >
+                  {{c.Nome}}, {{c.Pais}}
+              </mat-option>
+          </mat-select>
+        </mat-form-field>
+    </div>
+    <div class="filtro">
+        <mat-form-field>
+            <input matInput [matDatepicker]="picker" placeholder="Choose a date" [value]="date.value">
+            <mat-datepicker-toggle matSuffix [for]="picker">                        
+            </mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </div>
+    <div class="filtro">
+        <mat-form-field>
+                <input matInput value="1 Guest" class = "text-center">
+        </mat-form-field>            
+    </div>
+
+    <div class="filtro">
+        <mat-form-field>
+                <input matInput value="First CLass" class = "text-center">
+        </mat-form-field>            
+    </div>
+
+    <div class="filtro">
+        <mat-form-field>
+                <input matInput value="800€" class = "text-center">
+        </mat-form-field>            
+    </div>
+
+
   </div>
 </div>
