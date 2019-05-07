@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatSelectModule, MatOptionModule,MatDatepickerModule, MatNativeDateModule, MatInputModule, } from '@angular/material';
+import {MatSelectModule, MatOptionModule,MatDatepickerModule, MatNativeDateModule, MatInputModule,MatDialogModule } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,7 +25,8 @@ import { ListaHotelComponent } from './lista-hotel/lista-hotel.component';
     MatOptionModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatInputModule
+    MatInputModule,
+    MatDialogModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

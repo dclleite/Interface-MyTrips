@@ -2,7 +2,6 @@ import { Component, OnInit, EventEmitter } from '@angular/core';
 import { DataService } from '../data.service';
 import { Cidade } from 'src/model/cidade';
 import { FormControl } from '@angular/forms';
-import { headersToString } from 'selenium-webdriver/http';
 
 @Component({
   selector: 'app-header',
