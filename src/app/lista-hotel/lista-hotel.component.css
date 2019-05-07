@@ -16,6 +16,7 @@
     background-color: white;
     box-shadow: 1px 5px 3px rgba(0, 0, 0, 0.16);
     width: 40%;
+    cursor: pointer;
 }
 .imagem-hotel{
     width: 35%;
