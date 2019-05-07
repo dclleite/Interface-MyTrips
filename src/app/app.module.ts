@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatSelectModule, MatOptionModule,MatDatepickerModule, MatNativeDateModule, MatInputModule,MatDialogModule } from '@angular/material';
+import {MatSelectModule, MatOptionModule,MatDatepickerModule, MatNativeDateModule, MatInputModule, MatDialogModule } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,12 +9,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { DataService } from './data.service';
 import { HeaderComponent } from './header/header.component';
 import { ListaHotelComponent } from './lista-hotel/lista-hotel.component';
+import { DialogDetalhesHotelComponent } from './dialog-detalhes-hotel/dialog-detalhes-hotel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ListaHotelComponent
+    ListaHotelComponent,
+    DialogDetalhesHotelComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +30,9 @@ import { ListaHotelComponent } from './lista-hotel/lista-hotel.component';
     MatInputModule,
     MatDialogModule
   ],
+  entryComponents:[
+    DialogDetalhesHotelComponent
+  ],  
   providers: [DataService],
   bootstrap: [AppComponent]
 })

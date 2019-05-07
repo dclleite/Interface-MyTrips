@@ -1,10 +1,10 @@
 <div class="hoteis">
-    <div *ngFor='let h of hoteis' class="hotel">
+    <div *ngFor='let h of hoteis' class="hotel" mat-raised-button (click)="openDialog(h)">
   
-      <div class="imagem-hotel">
-        
+      <div class="div-imagem-hotel">
+        <img src="{{h.Imagem}}" >
       </div>
-  
+      
       <div class="dados-hotel">
         <p>{{h.Classificacao}}</p>
         <h3>{{h.Nome}}</h3>
@@ -12,7 +12,6 @@
         <p>{{h.Preco}},00 €</p>
       </div>
       
-  
     </div>
   </div>
   
