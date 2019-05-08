@@ -13,8 +13,7 @@
   <div class="detalhes">
     <div class="detalhes-visuais">
       <img class="imagem-hotel"  src="{{data.Imagem}}" alt="Hotel">
-      <div class="estrelhas-hotel"></div>
-      <img *ngFor="let i=0; i<5; i++;" src="{{}}" alt="">
+      <ngb-rating rate="{{data.classificacao}}"></ngb-rating>
     </div>
 
     <div class="descricao">

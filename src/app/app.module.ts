@@ -10,6 +10,10 @@ import { DataService } from './data.service';
 import { HeaderComponent } from './header/header.component';
 import { ListaHotelComponent } from './lista-hotel/lista-hotel.component';
 import { DialogDetalhesHotelComponent } from './dialog-detalhes-hotel/dialog-detalhes-hotel.component';
+import { NgbModule,NgbRating } from '@ng-bootstrap/ng-bootstrap';
+
+
+
 
 @NgModule({
   declarations: [
@@ -28,11 +32,15 @@ import { DialogDetalhesHotelComponent } from './dialog-detalhes-hotel/dialog-det
     MatDatepickerModule,
     MatNativeDateModule,
     MatInputModule,
-    MatDialogModule
+    MatDialogModule,
+    NgbModule
+  ],
+  exports:[
+    AppComponent
   ],
   entryComponents:[
     DialogDetalhesHotelComponent
-  ],  
+  ],
   providers: [DataService],
   bootstrap: [AppComponent]
 })
