@@ -1,14 +1,12 @@
-<p>
-    <button type="button" class="btn btn-outline-primary" (click)="isCollapsed = !isCollapsed"
-            [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
-      Toggle
-    </button>
-  </p>
-  <div id="collapseExample" [ngbCollapse]="isCollapsed">
-    <div class="card">
-      <div class="card-body">
-        You can collapse this card by clicking Toggle
-      </div>
-    </div>
-  </div>
+
+<button type="button" class="btn btn-outline-primary" (click)="isCollapsed = !isCollapsed"
+        [attr.aria-expanded]="!isCollapsed" aria-controls="collapseTeste">
+  Toggle
+</button>
+
+<ul id="collapseTeste" [ngbCollapse]="isCollapsed">
+  <li><a href="">Home</a></li>
+  <li><a href="">Cadastrar Cidade</a></li>
+  <li><a href="">Cadastrar Hotel</a></li>
+</ul>
   

@@ -12,6 +12,7 @@ import { ListaHotelComponent } from './lista-hotel/lista-hotel.component';
 import { DialogDetalhesHotelComponent } from './dialog-detalhes-hotel/dialog-detalhes-hotel.component';
 import { NgbModule,NgbRating,  } from '@ng-bootstrap/ng-bootstrap';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { CadastroCidadeComponent } from './cadastro-cidade/cadastro-cidade.component';
 
 
 
@@ -22,7 +23,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     HeaderComponent,
     ListaHotelComponent,
     DialogDetalhesHotelComponent,
-    NavBarComponent
+    NavBarComponent,
+    CadastroCidadeComponent
   ],
   imports: [
     BrowserModule,
