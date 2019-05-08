@@ -10,7 +10,8 @@ import { DataService } from './data.service';
 import { HeaderComponent } from './header/header.component';
 import { ListaHotelComponent } from './lista-hotel/lista-hotel.component';
 import { DialogDetalhesHotelComponent } from './dialog-detalhes-hotel/dialog-detalhes-hotel.component';
-import { NgbModule,NgbRating } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule,NgbRating,  } from '@ng-bootstrap/ng-bootstrap';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 
 
@@ -20,7 +21,8 @@ import { NgbModule,NgbRating } from '@ng-bootstrap/ng-bootstrap';
     AppComponent,
     HeaderComponent,
     ListaHotelComponent,
-    DialogDetalhesHotelComponent
+    DialogDetalhesHotelComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
