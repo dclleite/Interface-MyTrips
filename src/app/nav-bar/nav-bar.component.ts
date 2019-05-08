@@ -9,7 +9,8 @@ export class NavBarComponent implements OnInit {
 
   constructor() { }
 
-  public isCollapsed = false;
+  //true para menu ja iniciar fechado
+  public isCollapsed = true;
   
   ngOnInit() {
   }

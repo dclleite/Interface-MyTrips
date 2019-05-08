@@ -37,7 +37,7 @@ import { CadastroCidadeComponent } from './cadastro-cidade/cadastro-cidade.compo
     MatNativeDateModule,
     MatInputModule,
     MatDialogModule,
-    NgbModule
+    NgbModule,
   ],
   exports:[
     AppComponent
