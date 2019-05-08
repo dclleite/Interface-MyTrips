@@ -5,8 +5,8 @@
 </button>
 
 <ul id="collapseTeste" [ngbCollapse]="isCollapsed">
-  <li><a href="">Home</a></li>
-  <li><a href="">Cadastrar Cidade</a></li>
+  <li><a [routerLink]="['/Home']">Home</a></li>
+  <li><a [routerLink]="['/cadastroCidade']">Cadastrar Cidade</a></li>
   <li><a href="">Cadastrar Hotel</a></li>
 </ul>
   
