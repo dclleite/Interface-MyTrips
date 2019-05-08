@@ -13,6 +13,7 @@ export class DialogDetalhesHotelComponent implements OnInit {
        
     }
 
+    public imgLeftArrow = require("../../imagens/left-arrow.svg");
   ngOnInit() {
   }
 

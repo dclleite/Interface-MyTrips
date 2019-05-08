@@ -17,11 +17,11 @@ export class HeaderComponent implements OnInit {
     HeaderComponent.emitirIdCidade.emit(event);
   }
 
-  public placeholderIcon = require("./icones-filtros/placeholder.svg");
-  public calendarIcon = require("./icones-filtros/calendar-page-empty.svg");
-  public manUserIcon = require("./icones-filtros/man-user.svg");
-  public crownIcon = require("./icones-filtros/crown.svg");
-  public creditCardIcon = require("./icones-filtros/credit-card.svg");
+  public placeholderIcon = require("../../imagens/placeholder.svg");
+  public calendarIcon = require("../../imagens/calendar-page-empty.svg");
+  public manUserIcon = require("../../imagens/man-user.svg");
+  public crownIcon = require("../../imagens/crown.svg");
+  public creditCardIcon = require("../../imagens/credit-card.svg");
 
   date = new FormControl(new Date());
 

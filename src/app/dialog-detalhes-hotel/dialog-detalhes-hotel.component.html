@@ -1,11 +1,24 @@
-<h2 mat-dialog-title> {{data.Nome}}</h2>
+<div class="conteudo">
+  <div class="cabecalho">
+    <div class="cabecalho-interno">
+      <div class="botao">
+        <button mat-button mat-dialog-close> <img [src]=imgLeftArrow alt="" class="imagem-botao"> </button>
+      </div>
+      <div class="nome-hotel">
+        <h2 class="nome-hotel"> {{data.Nome}}</h2>
+      </div>
+    </div>
+  </div>
+  
+  <div class="detalhes">
+    <div class="detalhes-visuais">
+      <img class="imagem-hotel"  src="{{data.Imagem}}" alt="Hotel">
+      <div class="estrelhas-hotel"></div>
+      <img *ngFor="let i=0; i<5; i++;" src="{{}}" alt="">
+    </div>
 
-<mat-dialog-content>
-  <img src="{{data.Imagem}}" alt="Hotel">
-  <p>{{data.Classificacao}}</p>
-  <p>{{data.Descricao}}</p>
-</mat-dialog-content>
-
-<mat-dialog-actions>
-  <button mat-button mat-dialog-close> Close </button>
-</mat-dialog-actions>
+    <div class="descricao">
+      <p>{{data.Descricao}}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,85 @@
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 70%;
+    width: 50%;
+    left: 0;top: 0;right: 0;bottom: 0;
+    margin: auto;
+        
+}
+/*Cabeçalho com botão e nome do hotel*******************/
+.cabecalho{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-image: linear-gradient(to bottom, #2FAEFE 67%, #F2F2F2 33%) ;
+    width: 100%;
+    height: 25%;
+}
+.cabecalho-interno{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    height: 60%;
+    margin: 3% 0 1%;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    box-shadow: 1px 5px 3px rgba(0, 0, 0, 0.16);
+    text-align: center;
+}
+.botao{
+    width: 15%;
+    height: 100%;
+}
+.botao button {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.botao button:hover,
+.botao button:focus{
+    outline: 0 !important;
+}
+.imagem-botao{
+    width: 40%;
+    height: 35%;
+}
+.nome-hotel{
+    width: 85%;
+}
+/*Conteudo com detalhes dos hoteis*/
+.detalhes{
+    display: flex;
+    align-items: center;
+    padding: 2%;
+    height: 60%;
+    background-color: #f2f2f2;
+}
+.detalhes-visuais{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2%;
+    padding-left: 7%;
+    width: 40%;
+    height: 100%;
+}
+.imagem-hotel{
+    border-radius: 13px;
+    width: 100%;
+    height: 55%;
+}
+
+.descricao{
+    width: 60%;
+}
+
+
+
