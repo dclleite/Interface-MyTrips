@@ -5,6 +5,68 @@
     align-items: center;
     justify-content: center;
 }
-.cadastro-cidade-itens{
-    
+.cadastro-cidade-cadastro{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1000px;
+    margin: 3%;
+}
+.cadastro-cidade-sub-itens{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+.botao{
+    padding: 2%;
+    margin: 0;
+    background-color: transparent;
+    border: none ;
+    cursor: pointer;
+}
+.img{width: 100%;}
+.mat-form-field{
+    width: 95%;
+}
+
+/*Tabela das cidades*/
+
+.lista-cidade-tabela{
+    width: 80%;
+    max-width: 1000px;
+}
+.lista-cidade-tabela thead{
+    width: 100%;
+    background-color: #1E6FA2;
+    border: 1px solid #1E6FA2;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+.lista-cidade-tabela thead tr th{
+    padding: 1%;
+}
+.primeira-coluna{
+    width: 45%;
+}
+.segunda-coluna{
+    width: 40%;
+}
+.terceira-coluna{
+    width: 15%;
+    text-align: end;
+}
+
+.lista-cidade-tabela tbody{
+    background-color: #FFFFFF;
+}
+.lista-cidade-tabela tbody tr{
+    border: 1px solid #224870;
+}
+.lista-cidade-tabela tbody tr td{
+    padding: 1%;
+}
+.lista-cidade-tabela tbody tr td{
+    width: 30%;
 }

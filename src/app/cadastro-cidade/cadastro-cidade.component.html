@@ -1,10 +1,41 @@
 <div class="cadastro-cidade">
-  <div class="cadastro-cidade-itens">
-    <mat-form-field class="example-full-width">
-        <input matInput placeholder="Cidade">
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-        <input matInput placeholder="País">
-    </mat-form-field>
+
+  <div class="cadastro-cidade-cadastro">
+    <div class="cadastro-cidade-sub-itens">
+      <mat-form-field>
+          <input matInput placeholder="Cidade">
+      </mat-form-field>
+    </div>
+    <div class="cadastro-cidade-sub-itens">
+      <mat-form-field>
+          <input matInput placeholder="País">
+      </mat-form-field>
+    </div>
+    <div class="cadastro-cidade-botao">
+      <button class="botao"><img class="img" [src]=imgPlus alt=""></button>
+    </div>
   </div>
+
+  <!-- listagem das cidades cadastradas -->
+
+    <table class="lista-cidade-tabela">
+        <thead>
+          <tr>
+            <th class="primeira-coluna">Cidade</th>
+            <th class="segunda-coluna">País</th>
+            <th class="terceira-coluna">Acões</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let c of cidades">
+            <td class="primeira-coluna">{{c.Nome}}</td>
+            <td class="segunda-coluna">{{c.Pais}}</td>
+            <td class="terceira-coluna">
+              <button class="botao"><img class="img" [src]=imgPencilStriped alt=""></button>
+              <button class="botao"><img class="img" [src]="imgGarbage" alt=""></button>
+            </td>
+          </tr>
+        </tbody>
+    </table>
+
 </div>

@@ -2,7 +2,7 @@
   <h1>my trips</h1>
   <div class="filtros">
     <div class="filtro">
-      <img class="icone" [src]=placeholderIcon alt="icone de Ciade">
+      <img class="icone" [src]=placeholderIcon alt="icone de Cidade">
       <mat-form-field>  
         <mat-select name="selectCidade" placeholder="Cidade" (selectionChange)="cidadeSelecionada($event.value)">
             <mat-option *ngFor="let c of cidades" [value]="c.Id" >
