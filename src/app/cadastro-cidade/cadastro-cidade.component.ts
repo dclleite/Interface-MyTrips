@@ -23,12 +23,17 @@ export class CadastroCidadeComponent implements OnInit {
   }
 
   cadastarCidade(){
-    
     this.dataService.insertCidade(this.cidadeForm).subscribe(data => {
+      console.log(data);
       this.ngOnInit();
     });
+  }
 
-    
+  deletarCidade(id){
+    this.dataService.deleteCidade(id).subscribe(data => {
+      console.log(data);
+      this.ngOnInit();
+    });
   }
 
 }

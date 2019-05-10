@@ -6,7 +6,7 @@ import { ListaHotelComponent } from './lista-hotel/lista-hotel.component';
 const routes: Routes = [
   { path: '', component: ListaHotelComponent },
   { path: 'Home', component: ListaHotelComponent },
-  { path: 'cadastroCidade', component: CadastroCidadeComponent }
+  { path: 'Cadastro-Cidade', component: CadastroCidadeComponent }
 ];
 
 

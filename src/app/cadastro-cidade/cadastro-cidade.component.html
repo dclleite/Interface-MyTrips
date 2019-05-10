@@ -32,7 +32,7 @@
             <td class="segunda-coluna">{{c.Pais}}</td>
             <td class="terceira-coluna">
               <button class="botao"><img class="img" [src]=imgPencilStriped alt=""></button>
-              <button class="botao"><img class="img" [src]="imgGarbage" alt=""></button>
+              <button class="botao" (click)="deletarCidade(c.Id)"><img class="img" [src]="imgGarbage" alt=""></button>
             </td>
           </tr>
         </tbody>
