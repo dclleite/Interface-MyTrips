@@ -28,7 +28,7 @@ export class HeaderComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    this.dataService.getCidades().subscribe(data => this.cidades = data);
+    this.dataService.getCidade().subscribe(data => this.cidades = data);
   }
 
 

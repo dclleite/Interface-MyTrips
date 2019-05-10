@@ -13,6 +13,7 @@ import { DialogDetalhesHotelComponent } from './dialog-detalhes-hotel/dialog-det
 import { NgbModule,NgbRating,  } from '@ng-bootstrap/ng-bootstrap';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CadastroCidadeComponent } from './cadastro-cidade/cadastro-cidade.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -38,6 +39,7 @@ import { CadastroCidadeComponent } from './cadastro-cidade/cadastro-cidade.compo
     MatInputModule,
     MatDialogModule,
     NgbModule,
+    FormsModule
   ],
   exports:[
     AppComponent

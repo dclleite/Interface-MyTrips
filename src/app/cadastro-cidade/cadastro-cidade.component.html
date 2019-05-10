@@ -1,18 +1,18 @@
 <div class="cadastro-cidade">
 
-  <div class="cadastro-cidade-cadastro">
+  <div class="cadastro-cidade-cadastro" >
     <div class="cadastro-cidade-sub-itens">
-      <mat-form-field>
-          <input matInput placeholder="Cidade">
+      <mat-form-field >
+          <input [(ngModel)]="cidadeForm.Nome" name="Nome" matInput placeholder="Cidade">
       </mat-form-field>
     </div>
     <div class="cadastro-cidade-sub-itens">
       <mat-form-field>
-          <input matInput placeholder="País">
+          <input [(ngModel)]="cidadeForm.Pais" name="Pais" matInput placeholder="País" >
       </mat-form-field>
     </div>
     <div class="cadastro-cidade-botao">
-      <button class="botao"><img class="img" [src]=imgPlus alt=""></button>
+      <button class="botao" (click)="cadastarCidade()"><img class="img" [src]=imgPlus alt=""></button>
     </div>
   </div>
 

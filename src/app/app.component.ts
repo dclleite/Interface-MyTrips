@@ -12,10 +12,9 @@ export class AppComponent implements OnInit{
   cidades: Cidade[];
   hoteis: Hotel[];
 
-  constructor(private dataService: DataService){}
+  constructor(){}
 
   ngOnInit(){
-    return this.dataService.getCidades().subscribe(data => this.cidades = data);
     
   }
 }

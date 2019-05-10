@@ -10,6 +10,7 @@ import { Cidade } from 'src/model/cidade';
 export class CadastroCidadeComponent implements OnInit {
 
   cidades : Cidade[];
+  cidadeForm : Cidade = new Cidade();
   
   constructor(private dataService: DataService) { }
 
@@ -18,7 +19,16 @@ export class CadastroCidadeComponent implements OnInit {
   public imgPencilStriped = require("../../imagens/pencil-striped.svg");
 
   ngOnInit() {
-    this.dataService.getCidades().subscribe(data => this.cidades = data);
+    this.dataService.getCidade().subscribe(data => this.cidades = data);
+  }
+
+  cadastarCidade(){
+    
+    this.dataService.insertCidade(this.cidadeForm).subscribe(data => {
+      this.ngOnInit();
+    });
+
+    
   }
 
 }
