@@ -15,6 +15,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CadastroCidadeComponent } from './cadastro-cidade/cadastro-cidade.component';
 import { FormsModule } from '@angular/forms';
 import { CadastroHotelComponent } from './cadastro-hotel/cadastro-hotel.component';
+import { CadastroHotelParteDoisComponent } from './cadastro-hotel-parte-dois/cadastro-hotel-parte-dois.component';
 
 
 
@@ -27,7 +28,8 @@ import { CadastroHotelComponent } from './cadastro-hotel/cadastro-hotel.componen
     DialogDetalhesHotelComponent,
     NavBarComponent,
     CadastroCidadeComponent,
-    CadastroHotelComponent
+    CadastroHotelComponent,
+    CadastroHotelParteDoisComponent
   ],
   imports: [
     BrowserModule,
