@@ -36,6 +36,7 @@
 .lista-cidade-tabela{
     width: 80%;
     max-width: 1000px;
+    margin: 1%;
 }
 .lista-cidade-tabela thead{
     width: 100%;

@@ -23,6 +23,10 @@ export class DataService {
     return this._http.delete<Cidade>(this.Api + "Cidade/" + id);
   }
 
+  updateCidade(cidade : Cidade){
+    return this._http.put<Cidade>(this.Api + "Cidade", cidade);
+  }
+
   getHoteisPorIdCidade(id){
     return this._http.get<Hotel[]>(this.Api + 'Hotel?idCidade=' + id);
   }

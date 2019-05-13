@@ -11,6 +11,9 @@ export class CadastroCidadeComponent implements OnInit {
 
   cidades : Cidade[];
   cidadeForm : Cidade = new Cidade();
+  cidadeNull = new Cidade();
+  displayAdicionar = 'block';
+  displayEditar = 'none';
   
   constructor(private dataService: DataService) { }
 
@@ -27,6 +30,7 @@ export class CadastroCidadeComponent implements OnInit {
       console.log(data);
       this.ngOnInit();
     });
+    this.cidadeForm = this.cidadeNull;
   }
 
   deletarCidade(id){
@@ -36,4 +40,19 @@ export class CadastroCidadeComponent implements OnInit {
     });
   }
 
+  editarCidade(cidade){
+    this.cidadeForm = cidade;
+    this.displayEditar = 'block';
+    this.displayAdicionar = 'none';
+  }
+
+  putCidade(){
+    this.dataService.updateCidade(this.cidadeForm).subscribe(data => {
+      console.log(data);
+      this.ngOnInit();
+    })
+    this.displayEditar = 'none';
+    this.displayAdicionar = 'block';
+    this.cidadeForm = this.cidadeNull;
+  }
 }

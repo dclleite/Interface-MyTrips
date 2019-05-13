@@ -12,7 +12,8 @@
       </mat-form-field>
     </div>
     <div class="cadastro-cidade-botao">
-      <button class="botao" (click)="cadastarCidade()"><img class="img" [src]=imgPlus alt=""></button>
+      <button [ngStyle]="{'display': displayAdicionar}" class="botao" (click)="cadastarCidade()"><img class="img" [src]=imgPlus alt=""></button>
+      <button [ngStyle]="{'display': displayEditar}" class="botao" (click)="putCidade()"><img class="img" [src]=imgPlus alt=""></button>
     </div>
   </div>
 
@@ -31,7 +32,7 @@
             <td class="primeira-coluna">{{c.Nome}}</td>
             <td class="segunda-coluna">{{c.Pais}}</td>
             <td class="terceira-coluna">
-              <button class="botao"><img class="img" [src]=imgPencilStriped alt=""></button>
+              <button class="botao" (click)="editarCidade(c)"><img class="img" [src]=imgPencilStriped alt=""></button>
               <button class="botao" (click)="deletarCidade(c.Id)"><img class="img" [src]="imgGarbage" alt=""></button>
             </td>
           </tr>
