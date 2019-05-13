@@ -14,6 +14,7 @@ import { NgbModule,NgbRating,  } from '@ng-bootstrap/ng-bootstrap';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CadastroCidadeComponent } from './cadastro-cidade/cadastro-cidade.component';
 import { FormsModule } from '@angular/forms';
+import { CadastroHotelComponent } from './cadastro-hotel/cadastro-hotel.component';
 
 
 
@@ -25,7 +26,8 @@ import { FormsModule } from '@angular/forms';
     ListaHotelComponent,
     DialogDetalhesHotelComponent,
     NavBarComponent,
-    CadastroCidadeComponent
+    CadastroCidadeComponent,
+    CadastroHotelComponent
   ],
   imports: [
     BrowserModule,

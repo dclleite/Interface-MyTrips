@@ -1,0 +1,55 @@
+.cadastro-hotel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.botao{
+    padding: 2%;
+    margin: 0;
+    background-color: transparent;
+    border: none ;
+    cursor: pointer;
+}
+
+
+/*Tabela das hotels*/
+
+.lista-hotel-tabela{
+    width: 80%;
+    max-width: 1000px;
+    margin: 1%;
+}
+.lista-hotel-tabela thead{
+    width: 100%;
+    background-color: #1E6FA2;
+    border: 1px solid #1E6FA2;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+.lista-hotel-tabela thead tr th{
+    padding: 1%;
+}
+.primeira-coluna{
+    width: 45%;
+}
+.segunda-coluna{
+    width: 40%;
+}
+.terceira-coluna{
+    width: 15%;
+    text-align: end;
+}
+
+.lista-hotel-tabela tbody{
+    background-color: #FFFFFF;
+}
+.lista-hotel-tabela tbody tr{
+    border: 1px solid #224870;
+}
+.lista-hotel-tabela tbody tr td{
+    padding: 1%;
+}
+.lista-hotel-tabela tbody tr td{
+    width: 30%;
+}
