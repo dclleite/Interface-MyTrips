@@ -1,0 +1,10 @@
+.cadastro-hotel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2%;
+}
+.mat-form-field{
+    width: 40%;
+}

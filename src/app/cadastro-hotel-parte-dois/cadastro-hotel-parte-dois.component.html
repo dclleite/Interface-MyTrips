@@ -1,3 +1,27 @@
-<p>
-  cadastro-hotel-parte-dois works!
-</p>
+<div class="cadastro-hotel">
+  <p>Paris, França</p>
+  <mat-form-field class="">
+      <input matInput placeholder="Nome" >
+  </mat-form-field>
+  <mat-form-field class="">
+      <input matInput placeholder="Endereço" >
+  </mat-form-field>
+  <div>
+    <mat-form-field class="">
+        <input matInput placeholder="Preço" >
+    </mat-form-field>
+    Classificação <ngb-rating [(rate)]="selected" [readonly]="readonly" (click)="readonly = !readonly"></ngb-rating>
+  </div>
+  <mat-form-field class="">
+      <textarea matInput placeholder="Descrição"></textarea>
+  </mat-form-field>
+  <mat-form-field class="">
+      <input matInput placeholder="Imagem" >
+  </mat-form-field>
+  <div>
+    <button><img [src]=imgPencil alt=""></button>
+    <button></button>
+    <button><img [src]=imgGarbage alt=""></button>
+  </div>
+
+</div>
