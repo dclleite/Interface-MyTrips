@@ -31,7 +31,16 @@ export class DataService {
     return this._http.get<Hotel[]>(this.Api + 'Hotel');
   }
   getHoteisPorIdCidade(id){
-    return this._http.get<Hotel[]>(this.Api + 'Hotel?idCidade=' + id);
+    return this._http.get<Hotel>(this.Api + 'Hotel?idCidade=' + id);
+  }
+  insertHotel(hotel : Hotel){
+    return this._http.post<Hotel>(this.Api + "Hotel", hotel);
+  }
+  deleteHotel(id){
+    return this._http.delete<Hotel>(this.Api + "Hotel/" + id);
+  }
+  updateHotel(hotel : Hotel){
+    return this._http.put<Cidade>(this.Api + "Hotel", hotel);
   }
 
 
