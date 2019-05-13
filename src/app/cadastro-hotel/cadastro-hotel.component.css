@@ -11,7 +11,22 @@
     border: none ;
     cursor: pointer;
 }
-
+.lista-cidade{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    text-align-last: center;
+    margin: 3% 1.5%;
+    width: 20%;
+    
+}
+.icone{
+    width: 70%;
+}
+.mat-form-field{
+    width: 80% ;
+}
 
 /*Tabela das hotels*/
 

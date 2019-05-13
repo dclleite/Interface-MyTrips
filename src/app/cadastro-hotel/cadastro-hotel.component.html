@@ -1,7 +1,16 @@
 <div class="cadastro-hotel">
 
+  <div class="lista-cidade">
+    <mat-form-field>
+      <mat-select>
+          <mat-option *ngFor="let c of cidades" [value]="c.Id">
+            {{c.Nome}}
+          </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button class="botao"><img class="icone" [src]=imgPlaceholder alt=""></button> 
+  </div>
 
-  
   <!-- listagem dos hoteis cadastrados -->
   <table class="lista-hotel-tabela">
     <thead>
@@ -16,8 +25,8 @@
         <td class="primeira-coluna">{{h.Nome}}</td>
         <td class="segunda-coluna">{{h.NomeCidade}}, {{h.PaisCidade}}</td>
         <td class="terceira-coluna">
-          <button class="botao" (click)="editarhotel(c)"><img class="img" [src]=imgPencilStriped alt=""></button>
-          <button class="botao" (click)="deletarhotel(c.Id)"><img class="img" [src]="imgGarbage" alt=""></button>
+          <button class="botao" (click)="editarhotel(h)"><img class="img" [src]=imgPencilStriped alt=""></button>
+          <button class="botao" (click)="deletarhotel(h.Id)"><img class="img" [src]="imgGarbage" alt=""></button>
         </td>
       </tr>
     </tbody>
