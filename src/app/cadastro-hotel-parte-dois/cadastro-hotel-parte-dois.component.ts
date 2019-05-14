@@ -30,8 +30,8 @@ export class CadastroHotelParteDoisComponent implements OnInit {
     this.id = this.route.snapshot.params['id'];
       this.dataService.getCidadeId(this.id).subscribe(c => { 
         this.hotelForm.IdCidade = c.Id;
-        this.cidade = c;
-        console.log("teste" + this.cidade.Nome);
+        this.hotelForm.NomeCidade = c.Nome;
+        this.hotelForm.PaisCidade = c.Pais;
       })
   }
 
