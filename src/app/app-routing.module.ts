@@ -10,8 +10,8 @@ const routes: Routes = [
   { path: 'Home', component: ListaHotelComponent },
   { path: 'Cadastro-Cidade', component: CadastroCidadeComponent },
   { path: 'Cadastro-Hotel', component: CadastroHotelComponent },
-  { path: 'Cadastro-Hotel/:id', component: CadastroHotelParteDoisComponent },
-  { path: 'Editar-Hotel/:id', component: CadastroHotelParteDoisComponent }
+  { path: 'Cadastro-Hotel/:id', component: CadastroHotelParteDoisComponent, data: [{status: true}]},
+  { path: 'Editar-Hotel/:id', component: CadastroHotelParteDoisComponent, data: [{status: false}] }
 ];
 
 
