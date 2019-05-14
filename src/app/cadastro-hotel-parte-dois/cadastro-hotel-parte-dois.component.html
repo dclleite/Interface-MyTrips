@@ -1,27 +1,27 @@
 <div class="cadastro-hotel">
-  <p>Paris, França</p>
+  <p>{{hotelForm.NomeCidade}}, {{hotelForm.PaisCidade}}</p>
   <mat-form-field class="">
-      <input matInput placeholder="Nome" >
+      <input [(ngModel)]="hotelForm.Nome" matInput placeholder="Nome" >
   </mat-form-field>
   <mat-form-field class="">
-      <input matInput placeholder="Endereço" >
+      <input [(ngModel)]="hotelForm.Endereco" matInput placeholder="Endereço" >
   </mat-form-field>
   <div>
     <mat-form-field class="">
-        <input matInput placeholder="Preço" >
+        <input [(ngModel)]="hotelForm.Preco" matInput placeholder="Preço" >
     </mat-form-field>
-    Classificação <ngb-rating [(rate)]="selected" [readonly]="readonly" (click)="readonly = !readonly"></ngb-rating>
+    Classificação <ngb-rating [(ngModel)]="hotelForm.Classificacao" [(rate)]="selected" [readonly]="readonly" (click)="readonly = !readonly"></ngb-rating>
   </div>
   <mat-form-field class="">
-      <textarea matInput placeholder="Descrição"></textarea>
+      <textarea [(ngModel)]="hotelForm.Descricao" matInput placeholder="Descrição"></textarea>
   </mat-form-field>
   <mat-form-field class="">
-      <input matInput placeholder="Imagem" >
+      <input [(ngModel)]="hotelForm.Imagem" matInput placeholder="Imagem" >
   </mat-form-field>
   <div>
-    <button><img [src]=imgPencil alt=""></button>
-    <button></button>
-    <button><img [src]=imgGarbage alt=""></button>
+    <button><img [src]=imgPencil alt=""> Editar</button>
+    <button (click)="concluirCadastro()">Concluir Cadastro</button>
+    <button><img [src]=imgGarbage alt=""> Deletar</button>
   </div>
 
 </div>

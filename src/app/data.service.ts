@@ -10,10 +10,14 @@ export class DataService {
 
   Api = 'http://localhost/MyTrips/MyTrips/';
 
+
   constructor(private _http: HttpClient) { }
 
   getCidade(){
     return this._http.get<Cidade[]>(this.Api + 'Cidade');
+  }
+  getCidadeId(id){
+    return this._http.get<Cidade>(this.Api + "Cidade/" + id);
   }
 
   insertCidade(cidade : Cidade){
@@ -26,7 +30,7 @@ export class DataService {
   updateCidade(cidade : Cidade){
     return this._http.put<Cidade>(this.Api + "Cidade", cidade);
   }
-
+//-----------------------------------------------------------------------
   geHoteis(){
     return this._http.get<Hotel[]>(this.Api + 'Hotel');
   }

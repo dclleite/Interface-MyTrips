@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
 import { DataService } from '../data.service';
 import { Hotel } from 'src/model/hotel';
 import { Cidade } from 'src/model/cidade';
@@ -12,6 +12,12 @@ export class CadastroHotelComponent implements OnInit {
 
   hoteis : Hotel[];
   cidades : Cidade[];
+  static emitirIdCidade = new EventEmitter<string>();
+
+  cidadeSelecionada(event){
+    CadastroHotelComponent.emitirIdCidade.emit(event);
+  }
+
   public imgGarbage = require("../../imagens/garbage.svg");
   public imgPencilStriped = require("../../imagens/pencil-striped.svg");
   public imgPlaceholder = require("../../imagens/placeholder.svg");
