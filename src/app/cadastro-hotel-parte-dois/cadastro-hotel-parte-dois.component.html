@@ -1,16 +1,16 @@
 <div class="cadastro-hotel">
-  <p>{{ hotelForm.NomeCidade }}, {{hotelForm.PaisCidade}}</p>
+  <p>{{ hotelForm.NomeCidade }}, {{hotelForm.PaisCidade}} <img class="img-placeholder" [src]=imgPlaceholder alt=""></p>
   <mat-form-field class="">
       <input [(ngModel)]="hotelForm.Nome" matInput placeholder="Nome" [(readonly)]=statusReadonly >
   </mat-form-field>
   <mat-form-field class="">
       <input [(ngModel)]="hotelForm.Endereco" matInput placeholder="Endereço" [(readonly)]=statusReadonly>
   </mat-form-field>
-  <div>
+  <div class="dois-itens">
     <mat-form-field class="">
         <input [(ngModel)]="hotelForm.Preco" matInput placeholder="Preço" [(readonly)]=statusReadonly >
     </mat-form-field>
-    Classificação <ngb-rating [(ngModel)]="hotelForm.Classificacao" rate="{{hotelForm.Classificacao}}" [(readonly)]=statusReadonly></ngb-rating>
+    Classificação:<ngb-rating class="teste" [(ngModel)]="hotelForm.Classificacao" rate="{{hotelForm.Classificacao}}" [(readonly)]=statusReadonly></ngb-rating>
   </div>
   <mat-form-field class="">
       <textarea [(ngModel)]="hotelForm.Descricao" matInput placeholder="Descrição" [(readonly)]=statusReadonly></textarea>

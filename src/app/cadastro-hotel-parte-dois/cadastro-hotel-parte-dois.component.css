@@ -8,3 +8,15 @@
 .mat-form-field{
     width: 40%;
 }
+.img-placeholder{
+    width: 10%;
+}
+.dois-itens{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+}
+.teste{
+    color: #EFCE4A;
+}

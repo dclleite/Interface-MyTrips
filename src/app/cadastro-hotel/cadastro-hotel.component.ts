@@ -36,9 +36,6 @@ export class CadastroHotelComponent implements OnInit {
       console.log(data);
       this.ngOnInit();
     })
-
-    
-
   }
 
 }

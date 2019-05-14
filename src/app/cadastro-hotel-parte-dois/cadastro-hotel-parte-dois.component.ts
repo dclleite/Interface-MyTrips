@@ -21,6 +21,7 @@ export class CadastroHotelParteDoisComponent implements OnInit {
   status: boolean;
   statusReadonly : boolean;
 
+  public imgPlaceholder = require("../../imagens/placeholder.svg");
   public imgGarbage = require("../../imagens/garbage.svg");
   public imgPencil = require("../../imagens/pencil-striped-symbol-for-interface-edit-buttons.svg");
 
