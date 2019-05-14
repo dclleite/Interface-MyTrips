@@ -19,6 +19,7 @@ export class CadastroHotelParteDoisComponent implements OnInit {
   cidade = new Cidade();
   id: number;
   status: boolean;
+  statusReadonly : boolean;
 
   public imgGarbage = require("../../imagens/garbage.svg");
   public imgPencil = require("../../imagens/pencil-striped-symbol-for-interface-edit-buttons.svg");
@@ -28,6 +29,7 @@ export class CadastroHotelParteDoisComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.statusReadonly = false;
     this.status = this.route.snapshot.data[0]['status'];
     this.id = this.route.snapshot.params['id'];
     if (this.status) {
@@ -49,6 +51,10 @@ export class CadastroHotelParteDoisComponent implements OnInit {
     }else{
       this.dataService.updateHotel(this.hotelForm).subscribe();
     }
+    this.statusReadonly = true;
   }
 
+  habilitaReadonly(){
+    this.statusReadonly = false;
+  }
 }

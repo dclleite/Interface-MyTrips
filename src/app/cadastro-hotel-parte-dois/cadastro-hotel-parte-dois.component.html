@@ -1,25 +1,25 @@
 <div class="cadastro-hotel">
   <p>{{ hotelForm.NomeCidade }}, {{hotelForm.PaisCidade}}</p>
   <mat-form-field class="">
-      <input [(ngModel)]="hotelForm.Nome" matInput placeholder="Nome" >
+      <input [(ngModel)]="hotelForm.Nome" matInput placeholder="Nome" [(readonly)]=statusReadonly >
   </mat-form-field>
   <mat-form-field class="">
-      <input [(ngModel)]="hotelForm.Endereco" matInput placeholder="Endereço" >
+      <input [(ngModel)]="hotelForm.Endereco" matInput placeholder="Endereço" [(readonly)]=statusReadonly>
   </mat-form-field>
   <div>
     <mat-form-field class="">
-        <input [(ngModel)]="hotelForm.Preco" matInput placeholder="Preço" >
+        <input [(ngModel)]="hotelForm.Preco" matInput placeholder="Preço" [(readonly)]=statusReadonly >
     </mat-form-field>
-    Classificação <ngb-rating [(ngModel)]="hotelForm.Classificacao" rate="{{hotelForm.Classificacao}}" [readonly]="readonly" (click)="readonly = !readonly"></ngb-rating>
+    Classificação <ngb-rating [(ngModel)]="hotelForm.Classificacao" rate="{{hotelForm.Classificacao}}" [(readonly)]=statusReadonly></ngb-rating>
   </div>
   <mat-form-field class="">
-      <textarea [(ngModel)]="hotelForm.Descricao" matInput placeholder="Descrição"></textarea>
+      <textarea [(ngModel)]="hotelForm.Descricao" matInput placeholder="Descrição" [(readonly)]=statusReadonly></textarea>
   </mat-form-field>
   <mat-form-field class="">
-      <input [(ngModel)]="hotelForm.Imagem" matInput placeholder="Imagem" >
+      <input [(ngModel)]="hotelForm.Imagem" matInput placeholder="Imagem" [(readonly)]=statusReadonly >
   </mat-form-field>
   <div>
-    <button><img [src]=imgPencil alt=""> Editar</button>
+    <button (click)="habilitaReadonly()"><img [src]=imgPencil alt=""> Editar</button>
     <button (click)="concluirCadastro()">Concluir Cadastro</button>
     <button><img [src]=imgGarbage alt=""> Deletar</button>
   </div>
