@@ -12,10 +12,11 @@ export class CadastroHotelComponent implements OnInit {
 
   hoteis : Hotel[];
   cidades : Cidade[];
-  static emitirIdCidade = new EventEmitter<string>();
+  selected : number;
+  id: number;
 
-  cidadeSelecionada(event){
-    CadastroHotelComponent.emitirIdCidade.emit(event);
+  cidadeSelecionada(id: number){
+      this.id = id;
   }
 
   public imgGarbage = require("../../imagens/garbage.svg");

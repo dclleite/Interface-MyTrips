@@ -2,13 +2,13 @@
 
   <div class="lista-cidade">
     <mat-form-field>
-      <mat-select placeholder="Cadastrar em..." (selectionChange)="cidadeSelecionada($event.value)" >
+      <mat-select placeholder="Cadastrar em..." [(value)]="selected" (selectionChange)="cidadeSelecionada(selected)">
           <mat-option *ngFor="let c of cidades" [value]="c.Id">
             {{c.Nome}}
           </mat-option>
       </mat-select>
     </mat-form-field>
-    <a [routerLink]="['/Cadastro-Hotel-parte-dois']"><img class="icone" [src]=imgPlaceholder alt=""></a> 
+    <a [routerLink]="['/Cadastro-Hotel-parte-dois/', id]"><img class="icone" [src]=imgPlaceholder alt=""></a> 
   </div>
 
   <!-- listagem dos hoteis cadastrados -->
