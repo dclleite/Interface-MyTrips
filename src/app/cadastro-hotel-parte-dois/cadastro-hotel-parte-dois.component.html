@@ -10,7 +10,7 @@
     <mat-form-field class="">
         <input [(ngModel)]="hotelForm.Preco" matInput placeholder="Preço" >
     </mat-form-field>
-    Classificação <ngb-rating [(ngModel)]="hotelForm.Classificacao" [(rate)]="selected" [readonly]="readonly" (click)="readonly = !readonly"></ngb-rating>
+    Classificação <ngb-rating [(ngModel)]="hotelForm.Classificacao" rate="{{hotelForm.Classificacao}}" [readonly]="readonly" (click)="readonly = !readonly"></ngb-rating>
   </div>
   <mat-form-field class="">
       <textarea [(ngModel)]="hotelForm.Descricao" matInput placeholder="Descrição"></textarea>

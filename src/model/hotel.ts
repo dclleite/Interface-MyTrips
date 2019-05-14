@@ -9,4 +9,8 @@ export class Hotel{
     IdCidade: number;
     NomeCidade: string;
     PaisCidade: string;
+
+    constructor(id = 0){
+        this.Id = id;
+    }
 }

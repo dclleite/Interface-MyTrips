@@ -18,6 +18,7 @@ export class CadastroHotelParteDoisComponent implements OnInit {
   hotelForm = new Hotel();
   cidade = new Cidade();
   id: number;
+  status: boolean;
 
   public imgGarbage = require("../../imagens/garbage.svg");
   public imgPencil = require("../../imagens/pencil-striped-symbol-for-interface-edit-buttons.svg");
@@ -27,18 +28,27 @@ export class CadastroHotelParteDoisComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.status = this.route.snapshot.data[0]['status'];
     this.id = this.route.snapshot.params['id'];
-      this.dataService.getCidadeId(this.id).subscribe(c => { 
+    if (this.status) {
+      this.dataService.getCidadeId(this.id).subscribe(c => {
         this.hotelForm.IdCidade = c.Id;
         this.hotelForm.NomeCidade = c.Nome;
         this.hotelForm.PaisCidade = c.Pais;
+      });
+    }else if(!status){
+      this.dataService.getHotelId(this.id).subscribe(h => {
+        this.hotelForm = h;
       })
+    }
   }
 
   concluirCadastro(){
-    this.dataService.insertHotel(this.hotelForm).subscribe(h =>{
-      console.log(h);
-    })
+    if (this.hotelForm.Id == 0) {
+      this.dataService.insertHotel(this.hotelForm).subscribe();
+    }else{
+      this.dataService.updateHotel(this.hotelForm).subscribe();
+    }
   }
 
 }

@@ -13,6 +13,7 @@ export class CadastroHotelComponent implements OnInit {
   hoteis : Hotel[];
   cidades : Cidade[];
   selected : number;
+  status: boolean;
   id: number;
 
   cidadeSelecionada(id: number){
