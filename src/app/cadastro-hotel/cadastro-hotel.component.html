@@ -2,7 +2,7 @@
 
   <div class="lista-cidade">
     <mat-form-field>
-      <mat-select placeholder="Cadastrar em..." (selectionChange)="cidadeSelecionada($event.value)">
+      <mat-select placeholder="Cadastrar em..." (selectionChange)="cidadeSelecionada($event.value)" >
           <mat-option *ngFor="let c of cidades" [value]="c.Id">
             {{c.Nome}}
           </mat-option>

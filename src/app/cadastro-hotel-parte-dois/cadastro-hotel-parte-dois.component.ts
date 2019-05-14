@@ -25,12 +25,16 @@ export class CadastroHotelParteDoisComponent implements OnInit {
   }
 
   ngOnInit() {
-      this.dataService.getCidadeId(CadastroHotelComponent.emitirIdCidade).subscribe(c => this.cidade = c);
-    
-    
+    CadastroHotelComponent.emitirIdCidade.subscribe(id => {
+      this.dataService.getCidadeId(id).subscribe(c => { 
+        this.cidade = c;
+        console.log("teste" + this.cidade.Nome);
+      })
+    });
   }
 
   concluirCadastro(){
+    
     console.log(this.cidade);
   }
 
