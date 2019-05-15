@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { Hotel } from 'src/model/hotel';
 import { Cidade } from 'src/model/cidade';
 import { ActivatedRoute } from '@angular/router';
+import {NgForm} from '@angular/forms';
 
 
 @Component({
@@ -21,6 +22,7 @@ export class CadastroHotelParteDoisComponent implements OnInit {
   id: number;
   status: boolean;
   statusReadonly : boolean;
+  cadastroSucesso: boolean;
 
   public imgPlaceholder = require("../../imagens/placeholder.svg");
   public imgGarbage = require("../../imagens/garbage(2).svg");
@@ -34,6 +36,7 @@ export class CadastroHotelParteDoisComponent implements OnInit {
 
   ngOnInit() {
     this.statusReadonly = false;
+    this.cadastroSucesso = false;
     this.status = this.route.snapshot.data[0]['status'];
     this.id = this.route.snapshot.params['id'];
     if (this.status) {
@@ -56,13 +59,21 @@ export class CadastroHotelParteDoisComponent implements OnInit {
     this.router.navigate(['/Cadastro-Hotel']);
   }
 
-  concluirCadastro(){
-    if (this.hotelForm.Id == 0) {
-      this.dataService.insertHotel(this.hotelForm).subscribe();
+
+  concluirCadastro(form: NgForm){
+  
+    if(form.valid){
+      if (this.hotelForm.Id == 0) {
+        this.dataService.insertHotel(this.hotelForm).subscribe();
+      }else{
+        this.dataService.updateHotel(this.hotelForm).subscribe();
+      }
+      this.statusReadonly = true;
+      this.cadastroSucesso = true;
     }else{
-      this.dataService.updateHotel(this.hotelForm).subscribe();
+      
     }
-    this.statusReadonly = true;
+
   }
 
   habilitaReadonly(){
