@@ -1,14 +1,14 @@
 <div class="cadastro-hotel">
-  <div *ngIf="cadastroSucesso">
+  <div class="aviso cadastro-com-sucesso" *ngIf="cadastroSucesso">
     <p>Cadastro realizado com sucesso!</p>
   </div>
-  <div *ngIf="naoCadastrado">
+  <div class="aviso cadastro-sem-sucesso" *ngIf="naoCadastrado">
       <p>Preencha todos os campos obirgatorios!</p>
   </div>
   <p>{{ hotelForm.NomeCidade }}, {{hotelForm.PaisCidade}} <img class="img-placeholder" [src]=imgPlaceholder alt=""></p>
   <form class="formulario" name="formulario" #formulario="ngForm" (ngSubmit)="concluirCadastro(formulario)" >
       <mat-form-field class="">
-          <input [(ngModel)]="hotelForm.Nome" matInput placeholder="Nome" [(readonly)]=statusReadonly required minlength="3" name="nome" >
+          <input [(ngModel)]="hotelForm.Nome" matInput placeholder="Nome" [(readonly)]=statusReadonly required minlength="3" name="nome" autofocus>
       </mat-form-field>
       <mat-form-field class="">
           <input [(ngModel)]="hotelForm.Endereco" matInput placeholder="Endereço" [(readonly)]=statusReadonly required name="endereco">
@@ -29,9 +29,9 @@
           <input [(ngModel)]="hotelForm.Imagem" matInput placeholder="Imagem" [(readonly)]=statusReadonly required name="imagem">
       </mat-form-field>
       <div class="botoes">
-        <button class="botao editar" (click)="habilitaReadonly()"><img class="icon " [src]=imgPencil alt=""> Editar</button>
+        <button type="button" class="botao editar" (click)="habilitaReadonly()"><img class="icon " [src]=imgPencil alt=""> Editar</button>
         <button type="submit" class="botao concluir-cadastro">Concluir Cadastro</button>
-        <button class="botao deletar" (click)="deletarhotel(hotelForm.Id)" ><img class="icon" [src]=imgGarbage alt=""> Deletar</button>
+        <button type="button" class="botao deletar" (click)="deletarhotel(hotelForm.Id)" ><img class="icon" [src]=imgGarbage alt=""> Deletar</button>
       </div>
   </form>
  

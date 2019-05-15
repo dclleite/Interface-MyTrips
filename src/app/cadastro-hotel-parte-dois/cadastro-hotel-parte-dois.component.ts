@@ -80,7 +80,7 @@ export class CadastroHotelParteDoisComponent implements OnInit {
 
   }
 
-  habilitaReadonly(){
+  habilitaReadonly(form: NgForm){
     this.statusReadonly = false;
   }
 }

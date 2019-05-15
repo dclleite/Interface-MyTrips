@@ -13,6 +13,23 @@
     width: 100%;
     margin: 2%;
 }
+.aviso{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7%;
+    border-radius: 60px;
+    width: 50%;
+}
+.aviso p{
+    margin: 0;
+}
+.cadastro-com-sucesso{
+    background-color: #9EF0A9;
+}
+.cadastro-sem-sucesso{
+    background-color: #E13434;
+}
 
 .mat-form-field{
     width: 60%;
