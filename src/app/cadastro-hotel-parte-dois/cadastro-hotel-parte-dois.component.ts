@@ -22,7 +22,7 @@ export class CadastroHotelParteDoisComponent implements OnInit {
   statusReadonly : boolean;
 
   public imgPlaceholder = require("../../imagens/placeholder.svg");
-  public imgGarbage = require("../../imagens/garbage.svg");
+  public imgGarbage = require("../../imagens/garbage(2).svg");
   public imgPencil = require("../../imagens/pencil-striped-symbol-for-interface-edit-buttons.svg");
 
   constructor(private dataService : DataService,config: NgbRatingConfig, private route:ActivatedRoute) { 
@@ -44,6 +44,12 @@ export class CadastroHotelParteDoisComponent implements OnInit {
         this.hotelForm = h;
       })
     }
+  }
+
+  deletarhotel(id){
+    this.dataService.deleteHotel(id).subscribe(data => {
+      console.log(data);
+    })
   }
 
   concluirCadastro(){

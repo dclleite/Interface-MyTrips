@@ -11,10 +11,12 @@ import { FormControl } from '@angular/forms';
 export class HeaderComponent implements OnInit {
 
   cidades : Cidade[];
+  id = 0;
   static emitirIdCidade = new EventEmitter<string>();
 
   cidadeSelecionada(event){
     HeaderComponent.emitirIdCidade.emit(event);
+    this.id = event;
   }
 
   public placeholderIcon = require("../../imagens/placeholder.svg");

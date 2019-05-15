@@ -7,21 +7,24 @@
       <input [(ngModel)]="hotelForm.Endereco" matInput placeholder="Endereço" [(readonly)]=statusReadonly>
   </mat-form-field>
   <div class="dois-itens">
-    <mat-form-field class="">
+    <mat-form-field class="preco">
         <input [(ngModel)]="hotelForm.Preco" matInput placeholder="Preço" [(readonly)]=statusReadonly >
     </mat-form-field>
-    Classificação:<ngb-rating class="teste" [(ngModel)]="hotelForm.Classificacao" rate="{{hotelForm.Classificacao}}" [(readonly)]=statusReadonly></ngb-rating>
+    <p>
+      Classificação:
+      <ngb-rating class="star" [(ngModel)]="hotelForm.Classificacao" rate="{{hotelForm.Classificacao}}" [(readonly)]=statusReadonly></ngb-rating>
+    </p>
   </div>
   <mat-form-field class="">
-      <textarea [(ngModel)]="hotelForm.Descricao" matInput placeholder="Descrição" [(readonly)]=statusReadonly></textarea>
+      <textarea class="text-area" rows="10" [(ngModel)]="hotelForm.Descricao" matInput placeholder="Descrição" [(readonly)]=statusReadonly></textarea>
   </mat-form-field>
   <mat-form-field class="">
       <input [(ngModel)]="hotelForm.Imagem" matInput placeholder="Imagem" [(readonly)]=statusReadonly >
   </mat-form-field>
-  <div>
-    <button (click)="habilitaReadonly()"><img [src]=imgPencil alt=""> Editar</button>
-    <button (click)="concluirCadastro()">Concluir Cadastro</button>
-    <button><img [src]=imgGarbage alt=""> Deletar</button>
+  <div class="botoes">
+    <button class="botao editar" (click)="habilitaReadonly()"><img class="icon " [src]=imgPencil alt=""> Editar</button>
+    <button class="botao concluir-cadastro" (click)="concluirCadastro()">Concluir Cadastro</button>
+    <button class="botao deletar" (click)="deletarhotel(hotelForm.Id)" ><img class="icon" [src]=imgGarbage alt=""> Deletar</button>
   </div>
 
 </div>

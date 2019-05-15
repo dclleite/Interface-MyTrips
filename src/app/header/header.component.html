@@ -4,7 +4,7 @@
     <div class="filtro">
       <img class="icone" [src]=placeholderIcon alt="icone de Cidade">
       <mat-form-field>  
-        <mat-select name="selectCidade" placeholder="Cidade" (selectionChange)="cidadeSelecionada($event.value)">
+        <mat-select name="selectCidade" placeholder="{{id > 0 ? '': 'Cidade' }}" (selectionChange)="cidadeSelecionada($event.value)">
             <mat-option *ngFor="let c of cidades" [value]="c.Id" >
                 {{c.Nome}}, {{c.Pais}}
             </mat-option>
@@ -15,7 +15,7 @@
     <div class="filtro">
         <img class="icone" [src]=calendarIcon alt="icone do calendario">
       <mat-form-field>
-          <input matInput [matDatepicker]="picker" placeholder="Choose a date" [value]="date.value">
+          <input matInput [matDatepicker]="picker" placeholder="" [value]="date.value">
           <mat-datepicker-toggle matSuffix [for]="picker">                        
           </mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>

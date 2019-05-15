@@ -6,7 +6,8 @@
     margin: 2%;
 }
 .mat-form-field{
-    width: 40%;
+    width: 60%;
+    max-width: 800px;
 }
 .img-placeholder{
     width: 10%;
@@ -15,8 +16,51 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 40%;
+    max-width: 800px;
+    width: 60%;
 }
-.teste{
+.preco{
+    width: 40%;    
+}
+.star {
+    font-size: 1.5rem;
     color: #EFCE4A;
+}
+
+.text-area{
+    font-size: 0.8em;
+    text-align: left;
+    background-color: #FFFFFF;
+    resize: none;
+}
+.botoes{
+    display: flex;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+}
+.botao {
+    padding: 0;
+    margin: 0 2%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.editar{
+    color: #1E6FA2;
+}
+.concluir-cadastro{
+    background-color: #1E6FA2;
+    color: #FFFFFF;
+    padding: 0.7em 1em;
+    border-radius: 53px;
+}
+.deletar{
+    color: #E13434;
+}
+.editar, .deletar{
+    font-size: 1.3em;
+}
+.icon{
+    width: 20%;
 }
