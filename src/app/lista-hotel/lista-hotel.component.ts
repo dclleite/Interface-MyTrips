@@ -4,6 +4,7 @@ import { DataService } from '../data.service';
 import { HeaderComponent } from '../header/header.component';
 import { MatDialog } from '@angular/material';
 import { DialogDetalhesHotelComponent } from '../dialog-detalhes-hotel/dialog-detalhes-hotel.component';
+import { NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-lista-hotel',
@@ -14,7 +15,10 @@ export class ListaHotelComponent implements OnInit {
 
   hoteis: Hotel[];
   
-  constructor(private dataService: DataService, public dialog: MatDialog) { }
+  constructor(private dataService: DataService, public dialog: MatDialog, config: NgbRatingConfig) {
+    config.max = 5;
+    config.readonly = true;
+   }
 
   openDialog(hotel: Hotel): void {
     let dialogRef = this.dialog.open(DialogDetalhesHotelComponent, { 
