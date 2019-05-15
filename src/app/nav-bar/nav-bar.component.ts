@@ -9,8 +9,7 @@ export class NavBarComponent implements OnInit {
 
   constructor() { }
 
-  //true para menu ja iniciar fechado
-  public isCollapsed = true;
+  public imgEdit = require("../../imagens/edit.svg");
   
   ngOnInit() {
   }

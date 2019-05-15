@@ -1,0 +1,23 @@
+.nav-menu{
+    background-color: #2FAEFE;
+    color: #FFFFFF;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled).active, 
+.btn-outline-primary:not(:disabled):not(.disabled):active, 
+.show>.btn-outline-primary.dropdown-toggle,
+.btn-outline-primary:focus,
+.btn-outline-primary
+{
+    background-color: #2FAEFE;
+    color: #FFFFFF;
+    border: none;
+    box-shadow: none;
+}
+button:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+a{
+    text-decoration: none;
+    color: #FFFFFF;
+}

@@ -5,6 +5,15 @@
     width: 100%;
     background-image: linear-gradient(to bottom, #2FAEFE 78%, #F2F2F2 20%) ;
 }
+.itens-linha{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.title{
+    width: 70%;
+    text-align: center;
+}
 h1{
     color: rgba(255, 255, 255, 1);
     text-shadow: 9px 6px 6px rgba(0, 0, 0, 0.16);
