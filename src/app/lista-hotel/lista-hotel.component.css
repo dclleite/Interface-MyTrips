@@ -15,7 +15,7 @@
     margin: 1em;
     background-color: white;
     box-shadow: 1px 5px 3px rgba(0, 0, 0, 0.16);
-    width: 40%;
+    width: 50%;
     cursor: pointer;
 }
 .div-imagem-hotel{
@@ -27,16 +27,34 @@
     height: 100%;
     border-radius: 20px 0 0 20px;
 }
+.star{
+    color: rgba(239, 206, 74, 1);
+    font-size: 1.5em;
+}
 .dados-hotel{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    text-align: left;
     width: 65%;
     padding: 5%; 
     margin: 0;
     flex-grow: 1;
 }
 
-.dados-hotel p, h3{
-    margin: 0.5%;
+.dados-hotel h3{
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+}
+.dados-hotel p{
+    color: #777272;
+    font-size: .8em;
+    margin: 0;
+}
+.dados-hotel :last-child{
+    color: #1E6FA2;
+    font-size: 1em;
+    width: 100%;
+    text-align: right;
 }
