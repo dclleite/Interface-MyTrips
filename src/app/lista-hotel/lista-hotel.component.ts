@@ -15,9 +15,10 @@ export class ListaHotelComponent implements OnInit {
 
   hoteis: Hotel[];
   idCidade: number;
+  mostraDiv: boolean;
   
   constructor(private dataService: DataService, public dialog: MatDialog,
-     config: NgbRatingConfig) {
+      config: NgbRatingConfig) {
     config.max = 5;
     config.readonly = true;
    }
@@ -41,6 +42,7 @@ export class ListaHotelComponent implements OnInit {
     HeaderComponent.emitirIdCidade.subscribe(id => {
       this.dataService.getHoteisPorIdCidade(id).subscribe(h => {
         this.hoteis = h;
+        h.length === 0 ? this.mostraDiv = true : this.mostraDiv = false;
       })
     })
   } 
