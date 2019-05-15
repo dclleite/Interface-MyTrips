@@ -7,11 +7,16 @@
 }
 .itens-linha{
     display: flex;
+    justify-content: center;
     align-items: center;
     width: 100%;
 }
+.nav-bar{
+    position: absolute;
+    left: 2%;
+}
 .title{
-    width: 70%;
+    width: 100%;
     text-align: center;
 }
 h1{
