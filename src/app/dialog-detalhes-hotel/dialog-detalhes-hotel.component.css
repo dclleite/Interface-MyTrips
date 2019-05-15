@@ -2,8 +2,9 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    height: 70%;
-    width: 50%;
+    height: 700px;
+    width: 90%;
+    max-width: 1000px;;
     left: 0;top: 0;right: 0;bottom: 0;
     margin: auto;
         
@@ -51,6 +52,7 @@
     height: 35%;
 }
 .nome-hotel{
+    font-size: 1.2em;
     width: 85%;
 }
 /*Conteudo com detalhes dos hoteis*/
@@ -71,6 +73,10 @@
     width: 40%;
     height: 100%;
 }
+.star{
+    color: #EFCE4A;
+    font-size: 1.5em;
+}
 .imagem-hotel{
     border-radius: 13px;
     width: 100%;
@@ -78,6 +84,7 @@
 }
 
 .descricao{
+    padding: 2%;
     width: 60%;
 }
 
