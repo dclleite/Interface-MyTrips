@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { Hotel } from 'src/model/hotel';
 import { Cidade } from 'src/model/cidade';
@@ -13,7 +13,7 @@ export class CadastroHotelComponent implements OnInit {
   hoteis : Hotel[];
   cidades : Cidade[];
   selected : number;
-  status: boolean;
+  reload : boolean;
   id: number;
 
   cidadeSelecionada(id: number){
@@ -24,7 +24,9 @@ export class CadastroHotelComponent implements OnInit {
   public imgPencilStriped = require("../../imagens/pencil-striped.svg");
   public imgPlaceholder = require("../../imagens/placeholder.svg");
   
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService) {
+
+   }
 
   ngOnInit() {
     this.dataService.geHoteis().subscribe(data => this.hoteis = data);

@@ -2,10 +2,11 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
 import { DataService } from '../data.service';
-import { CadastroHotelComponent } from '../cadastro-hotel/cadastro-hotel.component';
+import { Router } from '@angular/router';
 import { Hotel } from 'src/model/hotel';
 import { Cidade } from 'src/model/cidade';
 import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-cadastro-hotel-parte-dois',
@@ -25,8 +26,10 @@ export class CadastroHotelParteDoisComponent implements OnInit {
   public imgGarbage = require("../../imagens/garbage(2).svg");
   public imgPencil = require("../../imagens/pencil-striped-symbol-for-interface-edit-buttons.svg");
 
-  constructor(private dataService : DataService,config: NgbRatingConfig, private route:ActivatedRoute) { 
-    config.max = 5;
+  constructor(private dataService : DataService,config: NgbRatingConfig, private route:ActivatedRoute,
+     private router: Router) { 
+        config.max = 5;
+    
   }
 
   ngOnInit() {
@@ -50,6 +53,7 @@ export class CadastroHotelParteDoisComponent implements OnInit {
     this.dataService.deleteHotel(id).subscribe(data => {
       console.log(data);
     })
+    this.router.navigate(['/Cadastro-Hotel']);
   }
 
   concluirCadastro(){
