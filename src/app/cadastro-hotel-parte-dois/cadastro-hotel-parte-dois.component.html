@@ -8,7 +8,7 @@
   <p>{{ hotelForm.NomeCidade }}, {{hotelForm.PaisCidade}} <img class="img-placeholder" [src]=imgPlaceholder alt=""></p>
   <form class="formulario" name="formulario" #formulario="ngForm" (ngSubmit)="concluirCadastro(formulario)" >
       <mat-form-field class="">
-          <input [(ngModel)]="hotelForm.Nome" matInput placeholder="Nome" [(readonly)]=statusReadonly required minlength="3" name="nome" autofocus>
+          <input [(ngModel)]="hotelForm.Nome" matInput placeholder="Nome" [(readonly)]=statusReadonly required minlength="3" name="nome" #inputNome autofocus>
       </mat-form-field>
       <mat-form-field class="">
           <input [(ngModel)]="hotelForm.Endereco" matInput placeholder="Endereço" [(readonly)]=statusReadonly required name="endereco">

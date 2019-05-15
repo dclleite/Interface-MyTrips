@@ -14,8 +14,10 @@ import { NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
 export class ListaHotelComponent implements OnInit {
 
   hoteis: Hotel[];
+  idCidade: number;
   
-  constructor(private dataService: DataService, public dialog: MatDialog, config: NgbRatingConfig) {
+  constructor(private dataService: DataService, public dialog: MatDialog,
+     config: NgbRatingConfig) {
     config.max = 5;
     config.readonly = true;
    }
@@ -36,11 +38,12 @@ export class ListaHotelComponent implements OnInit {
   }
 
   ngOnInit() {
-    HeaderComponent.emitirIdCidade.subscribe(
-      idCidade => this.dataService.getHoteisPorIdCidade(idCidade).subscribe(
-        data => this.hoteis = data
-      )
-    );
+    HeaderComponent.emitirIdCidade.subscribe(id => {
+      this.dataService.getHoteisPorIdCidade(id).subscribe(h => {
+        this.hoteis = h;
+      })
+    })
   } 
+
 
 }

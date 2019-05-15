@@ -7,7 +7,7 @@
     <div class="filtro">
       <img class="icone" [src]=placeholderIcon alt="icone de Cidade">
       <mat-form-field>  
-        <mat-select name="selectCidade" placeholder="{{id > 0 ? '': 'Cidade' }}" (selectionChange)="cidadeSelecionada($event.value)">
+        <mat-select name="selectCidade" [(value)]="selected" placeholder="{{id > 0 ? '': 'Cidade' }}" (selectionChange)="cidadeSelecionada($event.value)">
             <mat-option *ngFor="let c of cidades" [value]="c.Id" >
                 {{c.Nome}}, {{c.Pais}}
             </mat-option>

@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, ElementRef, ViewChild } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
 import { DataService } from '../data.service';
@@ -24,6 +24,7 @@ export class CadastroHotelParteDoisComponent implements OnInit {
   statusReadonly : boolean;
   cadastroSucesso: boolean;
   naoCadastrado: boolean;
+  @ViewChild('inputNome') inputNome: ElementRef; 
 
   public imgPlaceholder = require("../../imagens/placeholder.svg");
   public imgGarbage = require("../../imagens/garbage(2).svg");
@@ -80,7 +81,9 @@ export class CadastroHotelParteDoisComponent implements OnInit {
 
   }
 
-  habilitaReadonly(form: NgForm){
+  habilitaReadonly(){
     this.statusReadonly = false;
+    this.inputNome.nativeElement.focus();
+    
   }
 }

@@ -2,6 +2,7 @@ import { Component, OnInit, EventEmitter } from '@angular/core';
 import { DataService } from '../data.service';
 import { Cidade } from 'src/model/cidade';
 import { FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -11,6 +12,7 @@ import { FormControl } from '@angular/forms';
 export class HeaderComponent implements OnInit {
 
   cidades : Cidade[];
+  selected : number;
   id = 0;
   static emitirIdCidade = new EventEmitter<string>();
 
@@ -27,7 +29,7 @@ export class HeaderComponent implements OnInit {
 
   date = new FormControl(new Date());
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService, private router: Router) { }
 
   ngOnInit() {
     this.dataService.getCidade().subscribe(data => this.cidades = data);
