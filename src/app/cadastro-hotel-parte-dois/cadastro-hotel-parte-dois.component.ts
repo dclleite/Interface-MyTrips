@@ -84,6 +84,6 @@ export class CadastroHotelParteDoisComponent implements OnInit {
   habilitaReadonly(){
     this.statusReadonly = false;
     this.inputNome.nativeElement.focus();
-    
+    this.cadastroSucesso = false;
   }
 }
