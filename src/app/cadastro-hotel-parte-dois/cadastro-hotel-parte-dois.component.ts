@@ -23,6 +23,7 @@ export class CadastroHotelParteDoisComponent implements OnInit {
   status: boolean;
   statusReadonly : boolean;
   cadastroSucesso: boolean;
+  naoCadastrado: boolean;
 
   public imgPlaceholder = require("../../imagens/placeholder.svg");
   public imgGarbage = require("../../imagens/garbage(2).svg");
@@ -37,6 +38,7 @@ export class CadastroHotelParteDoisComponent implements OnInit {
   ngOnInit() {
     this.statusReadonly = false;
     this.cadastroSucesso = false;
+    this.naoCadastrado = false;
     this.status = this.route.snapshot.data[0]['status'];
     this.id = this.route.snapshot.params['id'];
     if (this.status) {
@@ -69,9 +71,11 @@ export class CadastroHotelParteDoisComponent implements OnInit {
         this.dataService.updateHotel(this.hotelForm).subscribe();
       }
       this.statusReadonly = true;
+      this.naoCadastrado = false;
       this.cadastroSucesso = true;
     }else{
-      
+      this.naoCadastrado = true;
+      this.cadastroSucesso = false;
     }
 
   }
