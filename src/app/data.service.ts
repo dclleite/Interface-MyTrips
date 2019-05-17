@@ -8,7 +8,7 @@ import { Hotel } from 'src/model/hotel';
 })
 export class DataService {
 
-  Api = 'http://localhost/MyTrips/MyTrips/';
+  Api = '/mytripsApi/MyTrips/';
 
 
   constructor(private _http: HttpClient) { }
@@ -24,7 +24,7 @@ export class DataService {
     return this._http.post<Cidade>(this.Api + "Cidade", cidade);
   }
   deleteCidade(id){
-    return this._http.delete<Cidade>(this.Api + "Cidade/" + id);
+    return this._http.delete<Cidade>(this.Api + "Cidade/Delete/" + id);
   }
 
   updateCidade(cidade : Cidade){
@@ -35,7 +35,7 @@ export class DataService {
     return this._http.get<Hotel[]>(this.Api + 'Hotel');
   }
   getHoteisPorIdCidade(id){
-    return this._http.get<Hotel[]>(this.Api + 'Hotel?idCidade=' + id);
+    return this._http.get<Hotel[]>(this.Api + 'Hotel/GetHotelByIdCidade?idCidade=' + id);
   }
   getHotelId(id){
     return this._http.get<Hotel>(this.Api + "Hotel/" + id);
@@ -44,7 +44,7 @@ export class DataService {
     return this._http.post<Hotel>(this.Api + "Hotel", hotel);
   }
   deleteHotel(id){
-    return this._http.delete<Hotel>(this.Api + "Hotel/" + id);
+    return this._http.delete<Hotel>(this.Api + "Hotel/Delete/" + id);
   }
   updateHotel(hotel : Hotel){
     return this._http.put<Cidade>(this.Api + "Hotel", hotel);
